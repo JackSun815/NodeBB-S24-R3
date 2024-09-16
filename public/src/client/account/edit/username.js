@@ -25,6 +25,8 @@ define('forum/account/edit/username', [
 
             const btn = $(this);
             btn.addClass('disabled').find('i').removeClass('hide');
+            const btn2 = $(this);
+            const btn3 = $(this);
 
             api.put('/users/' + userData.uid, userData).then((response) => {
                 const userslug = slugify(userData.username);
